@@ -32,9 +32,9 @@ jobs:
           app_artifact_location: "/build" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
           app_build_command: "npm run build"
-          env: # Add environment variables here
-            REACT_APP_ComputerVisionEndPoint: ${{REACT_APP_ComputerVisionEndPoint}}
-            REACT_APP_ComputerVisionKey:  ${{REACT_APP_ComputerVisionKey}}
+        env: # Add environment variables here
+          REACT_APP_ComputerVisionEndPoint: ${{REACT_APP_ComputerVisionEndPoint}}
+          REACT_APP_ComputerVisionKey:  ${{REACT_APP_ComputerVisionKey}}
             
 
   close_pull_request_job:
