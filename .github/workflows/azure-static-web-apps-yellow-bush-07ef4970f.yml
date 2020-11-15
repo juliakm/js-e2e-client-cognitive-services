@@ -32,11 +32,10 @@ jobs:
           app_artifact_location: "/build" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
           app_build_command: "npm run build"
-        env: # Add environment variables here
-          REACT_APP_COMPUTERVISIONENDPOINT: ${{REACT_APP_COMPUTERVISIONENDPOINT}}
-          REACT_APP_COMPUTERVISIONKEY:  ${{REACT_APP_COMPUTERVISIONKEY}}
-            
-
+        env:
+          REACT_APP_COMPUTERVISIONENDPOINT: ${{secrets.REACT_APP_COMPUTERVISIONENDPOINT}}
+          REACT_APP_COMPUTERVISIONKEY:  ${{secrets.REACT_APP_COMPUTERVISIONKEY}}
+          
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
