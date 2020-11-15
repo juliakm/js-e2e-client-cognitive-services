@@ -1,8 +1,8 @@
 import * as Speech from "microsoft-cognitiveservices-speech-sdk";
 
 // Authentication requirements
-const key = process.env.REACT_APP_SpeechKey || "fbfab2b80910435e91e080bebbf2a80d";
-const endpoint = process.env.REACT_APP_SpeechEndPoint || 'https://eastus.api.cognitive.microsoft.com/sts/v1.0/issuetoken';
+const key = process.env.REACT_APP_SpeechKey;
+const endpoint = process.env.REACT_APP_SpeechEndPoint;
 
 export const isConfigured = () => {
     
