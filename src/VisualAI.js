@@ -77,7 +77,7 @@ export const computerVision = async (url) => {
 const readTextFromURL = async (client, url) => {
 
     const STATUS_SUCCEEDED = "succeeded";
-    const STATUS_FAILED = "failed"
+    //const STATUS_FAILED = "failed"
     
     let result = await client.read(url);
     let operationID = result.operationLocation.split('/').slice(-1)[0];
