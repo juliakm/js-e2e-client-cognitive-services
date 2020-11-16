@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 import { computerVision, isConfigured as ComputerVisionIsConfigured} from './VisualAI';
-import { isConfigured as SpeechIsConfigured } from './SpeechAI';
 
 function App() {
 
@@ -39,7 +38,7 @@ function App() {
   const DisplayResults = () => (
     <div>
       <h2>Computer Vision Analysis</h2>
-      <div><img src={analysis[0].URL} alt="alt text" height="200" border="1" /></div>
+      <div><img src={analysis[0].URL} height="200" border="1" alt="" /></div>
       {PrettyPrintJson(analysis)}
     </div>
   );

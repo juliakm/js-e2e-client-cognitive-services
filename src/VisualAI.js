@@ -77,7 +77,6 @@ export const computerVision = async (url) => {
 const readTextFromURL = async (client, url) => {
 
     const STATUS_SUCCEEDED = "succeeded";
-    //const STATUS_FAILED = "failed"
     
     let result = await client.read(url);
     let operationID = result.operationLocation.split('/').slice(-1)[0];
@@ -87,7 +86,7 @@ const readTextFromURL = async (client, url) => {
     const start = Date.now();
     console.log(`${start} -${result?.status} `);
     
-    while (result.status !== STATUS_SUCCEEDED) {
+    while (result.status !== "succeeded") {
         await wait(500);
         console.log(`${Date.now() - start} -${result?.status} `);
         result = await client.getReadResult(operationID);
