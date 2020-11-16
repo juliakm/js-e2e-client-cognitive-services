@@ -75,8 +75,6 @@ export const computerVision = async (url) => {
 }
 // analyze text in image
 const readTextFromURL = async (client, url) => {
-
-    const STATUS_SUCCEEDED = "succeeded";
     
     let result = await client.read(url);
     let operationID = result.operationLocation.split('/').slice(-1)[0];
