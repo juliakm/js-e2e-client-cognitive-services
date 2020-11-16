@@ -19,9 +19,6 @@ function App() {
 
     computerVision(fileSelected || null).then((items) => {
       
-      const speech = SpeechIsConfigured();
-      console.log(`speech = ${speech}`)
-      
       // reset state/form
       setAnalysis(items);
       setFileSelected("");
