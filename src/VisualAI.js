@@ -26,7 +26,7 @@ const visualFeatures = [
 ];
 
 export const isConfigured = () => {
-    const result = (key.length > 0 && endpoint.length > 0) ? true : false;
+    const result = (key && endpoint && (key.length > 0) && (endpoint.length > 0)) ? true : false;
     console.log(`key = ${key}`)
     console.log(`endpoint = ${endpoint}`)
     console.log(`ComputerVision isConfigured = ${result}`)
