@@ -93,4 +93,5 @@ const readTextFromURL = async (client, url) => {
     // Return the first page of result. 
     // Replace[0] with the desired page if this is a multi-page file such as .pdf or.tiff.
     return result.analyzeResult; 
+    
 }
