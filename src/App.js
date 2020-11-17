@@ -44,7 +44,7 @@ function App() {
   const Analyze = () => {
     return (
     <div>
-      <h1>Analyze image</h1>
+      <h1>Analyze image - live</h1>
       {!processing &&
         <div>
           <div>
